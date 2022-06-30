@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<BODY BGCOLOR="orange">
+<center>
+<head><title>Quotes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<header>
+<a href="index.html">
+<img src="logo2.jpg" alt="life craft" title="life craft- master Your life">
+</a>
+</header>
+<hr>
+<nav>
+<center>
+
+</head>
+<body>
+
+<div class="wrap">
+    <h1 id="greeting"></h1>
+    <h1 id="clock"></h1>
+</div>
+
+
+<script>
+
+function clock(){
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var midday;
+
+    hours = updateTime(hours);
+    minutes = updateTime(minutes);
+    seconds = updateTime(seconds);
+    
+    // IF ELSE CONDITION
+    midday = (hours >= 12) ? "PM" : "AM";
+
+
+    document.getElementById("clock").innerHTML = "</span>"+hours+"</span>" + ":" +"</span>"+minutes+"</span>" + ":" +"</span>"+seconds+"</span>" + midday;
+
+    var time = setTimeout(function(){
+        clock();
+    }, 1000);
+
+    // Good Morning , afternoon, evening condition
+    if(hours < 12){
+        var greeting = " Good morning ";
+    }
+    if (hours >= 12 && hours <= 18){
+        var greeting = " Good afternoon ";
+    }
+    if (hours >=18 && hours <= 24){
+        var greeting = " Good Evening ";
+    }
+    document.getElementById("greeting").innerHTML = greeting;
+}
+
+function updateTime(k){
+    if(k < 10){
+        return "0" + k
+    } else {
+        return k;
+    }
+}
+
+//call clock function
+clock();
+
+</script>
+</body>
+</html>
+<p><strong><strong></p>
+<table cellspacing="5" cellpadding="5">
+<tr>
+<td><a href="Home.html">Home</a></td>
+<td><a href="About me.html">About me</a></td>
+<td><a href="habits.html">habits</a></td>
+<td><a href="skills.html">skills</a></td>
+<td><a href="Quotes.html">Quotes</a></td>
+<td><a href="books.html">books<a/></td>
+</tr>
+</nv>
+</table>
+<hr>
+<center>
+<p><strong><strong></p>
+<h2>About me</h2>
+<img src="img/me.jpg" width="40%" height= "2%">
+                  
+<ol>
+Hi!Im Mark Rolyn S. Dapilo from poblacicon norte sta cruz, ilocos sur. im 21 years of age
+im computer science student(bachelor of science in computer science in north luzon philippine state college. 3rd year student 
+and coming 4th year student this year. my favorite food is pakbet a lot of vegetables, adobo(chicken adobo),dinuguan etc.
+my favorite color is black and white. lot of my tshirts are white and black because it makes me comfortable.
+</ol>
+
+
+
+<hr>
+<footer>
+<li><strong>copyright 2022</strong><br />
+</footer>
+</body>

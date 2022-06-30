@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<BODY BGCOLOR="ORANGE">
+<center>
+<head><title>My Personal Webpage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<header>
+<a href="index.html">
+<img src="logo2.jpg"alt="life craft" title="life craft- master Your life">
+</a>
+</header>
+<hr>
+<nav>
+<center>
+
+</head>
+<body>
+
+<div class="wrap">
+    <h1 id="greeting"></h1>
+    <h1 id="clock"></h1>
+</div>
+
+
+<script>
+
+function clock(){
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var midday;
+
+    hours = updateTime(hours);
+    minutes = updateTime(minutes);
+    seconds = updateTime(seconds);
+    
+    // IF ELSE CONDITION
+    midday = (hours >= 12) ? "PM" : "AM";
+
+
+    document.getElementById("clock").innerHTML = "</span>"+hours+"</span>" + ":" +"</span>"+minutes+"</span>" + ":" +"</span>"+seconds+"</span>" + midday;
+
+    var time = setTimeout(function(){
+        clock();
+    }, 1000);
+
+    // Good Morning , afternoon, evening condition
+    if(hours < 12){
+        var greeting = " Good morning ";
+    }
+    if (hours >= 12 && hours <= 18){
+        var greeting = " Good afternoon ";
+    }
+    if (hours >=18 && hours <= 24){
+        var greeting = " Good Evening ";
+    }
+    document.getElementById("greeting").innerHTML = greeting;
+}
+
+function updateTime(k){
+    if(k < 10){
+        return "0" + k
+    } else {
+        return k;
+    }
+}
+
+//call clock function
+clock();
+
+</script>
+</body>
+</html>
+
+<p><strong><strong></p>
+<table cellspacing="5" cellpadding="5">
+<tr>
+<td><a href="Home.html">Home</a></td><p><strong><strong></p>
+<td><a href="About me.html">About me</a></td><p><strong><strong></p>
+<td><a href="habits.html">habits</a></td><p><strong><strong></p>
+<td><a href="skills.html">skills</a></td><p><strong><strong></p>
+<td><a href="Quotes.html">Quotes</a></td><p><strong><strong></p>
+<td><a href="books.html">books</a></td><p><strong><strong></p>
+</tr>
+</table>
+</nav>
+<hr>
+<center>
+<h2>Welcome!</h2>
+<h2>My name is Mark Rolyn S. Dapilo bachelor of science in computer science</h2>
+<center>
+<p>
+"The Future belongs to those who believe in the beauty of their dreams"
+</p>
+<center>
+<img src= "img/mark.jpg" width="20%" height="20%"><center/>
+<title="help and hope in life's hardest places">
+
+<ul>
+<li>Every new beginning comes from some other beginning's end</li>
+<li>You need to learn from your mistakes to start a new beginning</li>
+<li>No matter how hard the past is,you can always begin again</li>
+<li>Only i can change my life. no one can do it for me</li>
+<li>Make a new life by making new choices</li>
+<li>It's never too late for a new beginning</li>
+<li>Everyone thinks that's a new place or a new identity will jumpstart a new life</li>
+</ul>
+
+<p><strong><strong></p>
+<hr>
+<footer>
+copyright 2022
+<footer>
+</body>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<BODY BGCOLOR="orange">
+<head><title>Quotes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<header>
+<center>
+<a href="index.html">
+<img src="logo2.jpg" alt="life craft" title="life craft- master Your life">
+</a>
+</header>
+<hr>
+<nav>
+<center>
+
+</head>
+<body>
+
+<div class="wrap">
+    <h1 id="greeting"></h1>
+    <h1 id="clock"></h1>
+</div>
+
+
+<script>
+
+function clock(){
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    var midday;
+
+    hours = updateTime(hours);
+    minutes = updateTime(minutes);
+    seconds = updateTime(seconds);
+    
+    // IF ELSE CONDITION
+    midday = (hours >= 12) ? "PM" : "AM";
+
+
+    document.getElementById("clock").innerHTML = "</span>"+hours+"</span>" + ":" +"</span>"+minutes+"</span>" + ":" +"</span>"+seconds+"</span>" + midday;
+
+    var time = setTimeout(function(){
+        clock();
+    }, 1000);
+
+    // Good Morning , afternoon, evening condition
+    if(hours < 12){
+        var greeting = " Good morning ";
+    }
+    if (hours >= 12 && hours <= 18){
+        var greeting = " Good afternoon ";
+    }
+    if (hours >=18 && hours <= 24){
+        var greeting = " Good Evening ";
+    }
+    document.getElementById("greeting").innerHTML = greeting;
+}
+
+function updateTime(k){
+    if(k < 10){
+        return "0" + k
+    } else {
+        return k;
+    }
+}
+
+//call clock function
+clock();
+
+</script>
+</body>
+</html>
+<p><strong><strong></p>
+<table cellspacing="5" cellpadding="5">
+<tr>
+<td><a href="Home.html">Home</a></td>
+<td><a href="About me.html">About me</a></td>
+<td><a href="habits.html">habits</a></td>
+<td><a href="skills.html">skills</a></td>
+<td><a href="Quotes.html">Quotes</a></td>
+<td><a href="books.html">books<a/></td>
+</tr>
+</table>
+<hr>
+<center>
+<h2>Quotes</h2>
+<p><strong><strong></p>
+<blockquote>
+<p>Be yourself; everyone else is already taken</p>
+<i>-oscar wilde</i>
+<p>Be yourself; but always your better self</p>
+<i>-karl maeser</i>
+<p>existence wants you to be you </p>
+<p>your time is limited so don't waste it living someone else's life</p>
+<i>-steve jobs</i>
+<p> be who you area and say what you feel, because those who mind don't matter, and those who matter don't mind</p>
+<i>- bernard baruch
+<p>change the world by being yourself</p>
+<i>-amy poehler</i>
+<i>-osho</i>
+</blockquote>
+<hr>
+<footer>
+<li><strong>copyright 2022</strong><br />
+</footer>
+</nav>
+</body>
